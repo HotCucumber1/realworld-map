@@ -1,0 +1,25 @@
+# Gradle / build
+.gradle/
+build/
+*/build/
+.kotlin/
+captures/
+*.apk
+*.aab
+*.ap_
+*.dex
+output-metadata.json
+
+# Local configuration (SDK path, Supabase credentials) — never commit
+local.properties
+secrets.properties
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+.externalNativeBuild/
+.cxx/
+
+# Logs
+*.log

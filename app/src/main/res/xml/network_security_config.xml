@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- HTTPS only: cleartext traffic is refused for every host. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <!-- Debug builds only (ignored in release): also trust user-installed CAs, so the app works
+         behind TLS-inspecting corporate proxies and with debugging proxies. -->
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">World Explorer</string>
+
+    <!-- Common -->
+    <string name="action_back">Назад</string>
+    <string name="action_cancel">Отмена</string>
+    <string name="action_ok">ОК</string>
+    <string name="action_retry">Повторить</string>
+    <string name="action_open_settings">Открыть настройки</string>
+    <string name="action_grant">Разрешить</string>
+    <string name="action_close">Закрыть</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">Исследуйте реальный мир</string>
+    <string name="onboarding_text_1">World Explorer записывает ваши прогулки и постепенно открывает настоящую карту там, где вы побывали.</string>
+    <string name="onboarding_title_2">Туман войны и карта исследователя</string>
+    <string name="onboarding_text_2">В режиме «Туман» неизведанное скрыто. В режиме «Карта» видна вся карта, а исследованное подсвечено. Данные одни и те же — меняется только отображение.</string>
+    <string name="onboarding_title_3">Ваши данные — ваши</string>
+    <string name="onboarding_text_3">Маршруты хранятся только на телефоне. В облако они попадают, только если вы сами включите синхронизацию. Экспорт и импорт — в любой момент.</string>
+    <string name="onboarding_title_4">Доступ к геолокации</string>
+    <string name="onboarding_text_4">Геолокация нужна, чтобы показать вас на карте и записывать маршрут. Запись идёт только после нажатия «Старт» и видна в уведомлении — даже при выключенном экране.</string>
+    <string name="onboarding_permission_location">Геолокация</string>
+    <string name="onboarding_permission_location_desc">Точное местоположение для записи маршрута</string>
+    <string name="onboarding_permission_notifications">Уведомления</string>
+    <string name="onboarding_permission_notifications_desc">Показывают, что запись активна, и позволяют её остановить</string>
+    <string name="onboarding_granted">Разрешено</string>
+    <string name="onboarding_next">Далее</string>
+    <string name="onboarding_start">Начать исследование</string>
+    <string name="onboarding_skip">Пропустить</string>
+    <string name="onboarding_later_hint">Разрешения можно выдать позже — карта будет работать и без них.</string>
+
+    <!-- Map -->
+    <string name="mode_fog">Туман</string>
+    <string name="mode_explorer">Карта</string>
+    <string name="map_record_start">Начать запись</string>
+    <string name="map_record_stop">Остановить запись</string>
+    <string name="map_center">Моё местоположение</string>
+    <string name="map_history">История</string>
+    <string name="map_settings">Настройки</string>
+    <string name="map_toggle_mode">Переключить режим карты</string>
+    <string name="stat_distance">Дистанция</string>
+    <string name="stat_duration">Время</string>
+    <string name="stat_explored">Исследовано</string>
+    <string name="stat_points">Точек</string>
+    <string name="status_gps_ok">GPS</string>
+    <string name="status_gps_waiting">Поиск GPS…</string>
+    <string name="status_gps_lost">Нет сигнала GPS</string>
+    <string name="status_gps_off">GPS выключен</string>
+    <string name="status_no_permission">Нет доступа к геолокации</string>
+    <string name="status_offline">Нет сети · показан кэш карты</string>
+    <string name="status_recording">Запись</string>
+    <string name="status_location_age">%1$s назад</string>
+    <string name="status_location_now">сейчас</string>
+    <string name="map_load_failed">Не удалось загрузить карту. Проверьте сеть или выберите другой стиль в настройках.</string>
+    <string name="map_permission_banner">Разрешите доступ к геолокации, чтобы видеть себя на карте и записывать маршрут.</string>
+    <string name="map_gps_off_banner">Геолокация выключена в системе.</string>
+    <string name="msg_recording_started">Запись маршрута началась</string>
+    <string name="msg_recording_stopped">Маршрут сохранён: %1$s</string>
+    <string name="msg_recording_resumed">Запись маршрута продолжена после перезапуска</string>
+    <string name="msg_recording_interrupted">Предыдущая запись была прервана и сохранена</string>
+    <string name="msg_recording_interrupted_permission">Запись прервана: нет доступа к геолокации</string>
+
+    <!-- Errors -->
+    <string name="error_permission">Нет разрешения на геолокацию</string>
+    <string name="error_location_disabled">Геолокация выключена в системных настройках</string>
+    <string name="error_already_tracking">Запись уже идёт</string>
+    <string name="error_not_tracking">Запись не идёт</string>
+    <string name="error_service">Не удалось запустить запись: %1$s</string>
+    <string name="error_no_network">Нет подключения к сети</string>
+    <string name="error_sync_not_configured">Облако не настроено в этой сборке</string>
+    <string name="error_not_signed_in">Войдите в аккаунт</string>
+    <string name="error_session_expired">Сессия истекла — войдите снова</string>
+    <string name="error_invalid_credentials">Неверные данные: %1$s</string>
+    <string name="error_backend_unavailable">Сервер недоступен (%1$s). Повторим позже.</string>
+    <string name="error_backend_rejected">Сервер отклонил запрос (HTTP %1$d)</string>
+    <string name="error_database">Ошибка локальной базы данных</string>
+    <string name="error_storage_full">Недостаточно места на устройстве</string>
+    <string name="error_backup_corrupted">Файл резервной копии повреждён: %1$s</string>
+    <string name="error_backup_version">Версия резервной копии %1$d не поддерживается (поддерживается до %2$d). Обновите приложение.</string>
+    <string name="error_backup_too_large">Файл слишком большой</string>
+    <string name="error_file_access">Нет доступа к файлу (%1$s)</string>
+    <string name="error_validation">Проверьте введённые данные</string>
+    <string name="error_unexpected">Непредвиденная ошибка: %1$s</string>
+
+    <!-- History -->
+    <string name="history_title">История маршрутов</string>
+    <string name="history_empty_title">Пока нет маршрутов</string>
+    <string name="history_empty_text">Нажмите кнопку записи на карте и отправляйтесь исследовать.</string>
+    <string name="history_active">Идёт запись</string>
+    <string name="history_interrupted">Прервана</string>
+    <string name="detail_title">Маршрут</string>
+    <string name="detail_started">Начало</string>
+    <string name="detail_ended">Окончание</string>
+    <string name="detail_duration">Продолжительность</string>
+    <string name="detail_distance">Расстояние</string>
+    <string name="detail_points">GPS-точек</string>
+    <string name="detail_rejected">Отброшено фильтром</string>
+    <string name="detail_quality">Качество GPS</string>
+    <string name="detail_avg_accuracy">Средняя точность</string>
+    <string name="detail_best_accuracy">Лучшая точность</string>
+    <string name="detail_worst_accuracy">Худшая точность</string>
+    <string name="detail_precise_share">Точек точнее 10 м</string>
+    <string name="detail_recording_now">записывается</string>
+    <string name="detail_no_points">В маршруте нет точек</string>
+    <string name="detail_not_found">Маршрут не найден</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_section_map">Карта</string>
+    <string name="settings_map_mode">Режим карты</string>
+    <string name="settings_map_style">Стиль карты</string>
+    <string name="settings_custom_style">Свой URL стиля MapLibre</string>
+    <string name="settings_custom_style_hint">https://…/style.json</string>
+    <string name="settings_fog_style">Вид тумана</string>
+    <string name="fog_clouds">Облака</string>
+    <string name="fog_dark">Тёмный слой</string>
+    <string name="settings_show_track">Показывать трек</string>
+    <string name="settings_show_track_desc">Линия текущего маршрута на карте</string>
+    <string name="settings_show_highlight">Подсветка исследованного</string>
+    <string name="settings_show_highlight_desc">В режиме «Карта» исследованные области выделяются цветом</string>
+    <string name="settings_section_exploration">Исследование</string>
+    <string name="settings_radius">Радиус открытия территории</string>
+    <string name="settings_radius_desc">Применяется к новым точкам. Уже открытая территория не меняется.</string>
+    <string name="settings_radius_value">%1$d м</string>
+    <string name="settings_section_tracking">Запись маршрута</string>
+    <string name="settings_profile">Частота и точность GPS</string>
+    <string name="profile_precise">Точный</string>
+    <string name="profile_precise_desc">Точка каждые 2 с · больше расход батареи</string>
+    <string name="profile_balanced">Сбалансированный</string>
+    <string name="profile_balanced_desc">Точка каждые 4 с · рекомендуется</string>
+    <string name="profile_battery">Экономный</string>
+    <string name="profile_battery_desc">Точка каждые 10 с · дольше работает батарея</string>
+    <string name="settings_profile_adaptive">На месте приложение автоматически реже запрашивает координаты.</string>
+    <string name="settings_background_location">Фоновый доступ к геолокации</string>
+    <string name="settings_background_location_on">Разрешён «Всегда»</string>
+    <string name="settings_background_location_off">Необязательно. Позволяет системе возобновить прерванную запись без открытия приложения.</string>
+    <string name="settings_battery">Оптимизация батареи</string>
+    <string name="settings_battery_on">Приложение исключено из оптимизации</string>
+    <string name="settings_battery_off">Некоторые производители останавливают фоновую запись. Исключите приложение из оптимизации.</string>
+    <string name="settings_section_data">Данные</string>
+    <string name="settings_backup">Экспорт и импорт</string>
+    <string name="settings_backup_desc">Резервная копия и перенос на другой телефон</string>
+    <string name="settings_cloud">Облачная синхронизация</string>
+    <string name="settings_cloud_off">Выключена</string>
+    <string name="settings_cloud_not_configured">Не настроена в сборке</string>
+    <string name="settings_cloud_on">Включена · %1$s</string>
+    <string name="settings_section_about">О приложении</string>
+    <string name="settings_version">Версия</string>
+    <string name="settings_map_data">Картографические данные</string>
+    <string name="settings_map_data_text">© участники OpenStreetMap (ODbL). Векторные тайлы: OpenFreeMap, схема OpenMapTiles. Растровые тайлы: tile.openstreetmap.org. Отрисовка: MapLibre Native (BSD-2).</string>
+    <string name="settings_privacy">Приватность</string>
+    <string name="settings_privacy_text">Маршруты, GPS-точки и исследованная территория хранятся в базе данных на телефоне и не попадают в системные резервные копии. В облако они отправляются, только если вы вошли в аккаунт и включили синхронизацию. Координаты не пишутся в журналы приложения.</string>
+
+    <string name="style_liberty">OpenFreeMap Liberty (подробный)</string>
+    <string name="style_positron">OpenFreeMap Positron (светлый)</string>
+    <string name="style_bright">OpenFreeMap Bright (яркий)</string>
+    <string name="style_osm_raster">OpenStreetMap (растровый)</string>
+    <string name="style_custom">Свой стиль по URL</string>
+
+    <!-- Backup -->
+    <string name="backup_title">Экспорт и импорт</string>
+    <string name="backup_export">Экспортировать всё</string>
+    <string name="backup_export_desc">ZIP-архив со всеми маршрутами, GPS-точками, исследованной территорией и настройками.</string>
+    <string name="backup_import">Импортировать из файла</string>
+    <string name="backup_import_desc">Файл проверяется целиком перед изменением данных. При ошибке ничего не меняется.</string>
+    <string name="backup_transfer_title">Перенос на другой телефон</string>
+    <string name="backup_transfer_text">1. Экспортируйте данные здесь и передайте файл (облако, мессенджер, кабель).\n2. Установите World Explorer на новый телефон.\n3. Откройте «Экспорт и импорт» → «Импортировать» и выберите файл.</string>
+    <string name="backup_working">Подождите…</string>
+    <string name="backup_export_done">Экспорт завершён: %1$d маршрутов, %2$d точек, %3$d ячеек</string>
+    <string name="backup_inspect_title">Резервная копия</string>
+    <string name="backup_inspect_text">Создана: %1$s\nВерсия приложения: %2$s\nМаршрутов: %3$d\nGPS-точек: %4$d\nИсследованных ячеек: %5$d</string>
+    <string name="backup_merge">Объединить</string>
+    <string name="backup_merge_desc">Добавить недостающее к данным на телефоне. Ничего не удаляется; совпадающие маршруты берутся в более новой версии.</string>
+    <string name="backup_replace">Заменить</string>
+    <string name="backup_replace_desc">Удалить данные на телефоне и восстановить их из файла, включая настройки.</string>
+    <string name="backup_replace_confirm_title">Заменить локальные данные?</string>
+    <string name="backup_replace_confirm_text">Все маршруты и исследованная территория на этом телефоне будут удалены и заменены данными из файла. Перед заменой приложение сохранит копию текущих данных во внутреннюю память.</string>
+    <string name="backup_replace_confirm_check">Я понимаю, что текущие данные будут заменены</string>
+    <string name="backup_replace_suggest_export">Сначала экспортировать текущие данные</string>
+    <string name="backup_import_done">Импорт завершён</string>
+    <string name="backup_import_summary">Маршруты: +%1$d, обновлено %2$d, без изменений %3$d\nТочки: +%4$d, дубликатов %5$d\nЯчейки: +%6$d, уже открыто %7$d</string>
+    <string name="backup_safety_copy">Копия прежних данных: %1$s</string>
+    <string name="backup_import_while_tracking">Остановите запись маршрута перед импортом</string>
+
+    <!-- Cloud -->
+    <string name="cloud_title">Облачная синхронизация</string>
+    <string name="cloud_not_configured_title">Облако не настроено</string>
+    <string name="cloud_not_configured_text">Эта сборка создана без адреса сервера. Приложение полностью работает локально. Чтобы включить синхронизацию, создайте проект Supabase, выполните supabase/schema.sql и добавьте supabase.url и supabase.anonKey в local.properties, затем пересоберите приложение (см. SYNC.md).</string>
+    <string name="cloud_email">E-mail</string>
+    <string name="cloud_password">Пароль (не менее 6 символов)</string>
+    <string name="cloud_sign_in">Войти</string>
+    <string name="cloud_sign_up">Создать аккаунт</string>
+    <string name="cloud_confirm_email">Аккаунт создан. Подтвердите e-mail по ссылке из письма и войдите.</string>
+    <string name="cloud_signed_in_as">Аккаунт: %1$s</string>
+    <string name="cloud_enable">Синхронизировать мои данные</string>
+    <string name="cloud_enable_desc">Маршруты, GPS-точки и исследованная территория будут отправляться на ваш сервер Supabase и загружаться на другие телефоны с этим аккаунтом.</string>
+    <string name="cloud_auto">Автоматически</string>
+    <string name="cloud_auto_desc">Каждые ~6 часов и после окончания записи, при наличии сети</string>
+    <string name="cloud_unmetered">Только по Wi-Fi</string>
+    <string name="cloud_sync_now">Синхронизировать сейчас</string>
+    <string name="cloud_status_never">Ещё не синхронизировалось</string>
+    <string name="cloud_status_last">Последняя синхронизация: %1$s</string>
+    <string name="cloud_status_error">Ошибка: %1$s</string>
+    <string name="cloud_status_pending">Ожидают отправки: маршрутов %1$d, точек %2$d, ячеек %3$d</string>
+    <string name="cloud_status_running">Синхронизация…</string>
+    <string name="cloud_sync_done">Готово: отправлено %1$d точек, получено %2$d</string>
+    <string name="cloud_sign_out">Выйти</string>
+    <string name="cloud_delete_data">Удалить мои данные из облака</string>
+    <string name="cloud_delete_data_confirm">Все ваши маршруты и территория будут удалены с сервера. Данные на этом телефоне сохранятся. Синхронизация будет выключена.</string>
+    <string name="cloud_delete_account">Удалить аккаунт</string>
+    <string name="cloud_delete_account_confirm">Аккаунт и все данные на сервере будут удалены без возможности восстановления. Данные на этом телефоне сохранятся.</string>
+    <string name="cloud_deleted">Удалено</string>
+    <string name="cloud_active_tracks_note">Маршрут отправляется после окончания записи.</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_tracking">Запись маршрута</string>
+    <string name="notif_channel_tracking_desc">Постоянное уведомление во время записи маршрута</string>
+    <string name="notif_channel_alerts">Предупреждения</string>
+    <string name="notif_channel_alerts_desc">Сообщения о прерванной записи</string>
+    <string name="notif_tracking_title">Идёт запись маршрута</string>
+    <string name="notif_tracking_text">%1$s · %2$d точек</string>
+    <string name="notif_waiting_gps">Ожидание сигнала GPS…</string>
+    <string name="notif_gps_lost">Нет сигнала GPS — запись продолжится, когда он появится</string>
+    <string name="notif_gps_off">Геолокация выключена — включите её, чтобы продолжить запись</string>
+    <string name="notif_stop">Остановить</string>
+    <string name="notif_interrupted_title">Запись маршрута прервана</string>
+    <string name="notif_interrupted_text">Откройте приложение, чтобы продолжить запись.</string>
+    <string name="notif_permission_lost">Нет доступа к геолокации. Запись остановлена.</string>
+
+    <!-- Units -->
+    <string name="unit_m">%1$s м</string>
+    <string name="unit_km">%1$s км</string>
+    <string name="unit_m2">%1$s м²</string>
+    <string name="unit_km2">%1$s км²</string>
+    <string name="duration_hm">%1$d ч %2$02d мин</string>
+    <string name="duration_ms">%1$d мин %2$02d с</string>
+    <string name="duration_s">%1$d с</string>
+</resources>
