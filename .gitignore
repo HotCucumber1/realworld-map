@@ -13,6 +13,10 @@ output-metadata.json
 # Local configuration (SDK path, Supabase credentials) — never commit
 local.properties
 secrets.properties
+# Release signing: key and its passwords never go to Git
+keystore.properties
+*.jks
+*.keystore
 
 # IDE
 .idea/

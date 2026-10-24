@@ -18,6 +18,17 @@ val localProps = Properties().apply {
 fun secret(key: String, env: String): String =
     (localProps.getProperty(key) ?: System.getenv(env) ?: "").trim()
 
+// Release signing (optional): keystore.properties in the project root, git-ignored.
+//   storeFile=/absolute/path/release.jks
+//   storePassword=…
+//   keyAlias=…
+//   keyPassword=…
+// Without it assembleRelease produces an unsigned APK.
+val keystoreProps = Properties().apply {
+    val file = rootProject.file("keystore.properties")
+    if (file.exists()) file.inputStream().use { load(it) }
+}
+
 fun String.asBuildConfigString(): String = "\"" + replace("\\", "\\\\").replace("\"", "\\\"") + "\""
 
 android {
@@ -37,6 +48,17 @@ android {
         buildConfigField("String", "SUPABASE_ANON_KEY", secret("supabase.anonKey", "SUPABASE_ANON_KEY").asBuildConfigString())
     }
 
+    signingConfigs {
+        if (keystoreProps.getProperty("storeFile") != null) {
+            create("release") {
+                storeFile = file(keystoreProps.getProperty("storeFile"))
+                storePassword = keystoreProps.getProperty("storePassword")
+                keyAlias = keystoreProps.getProperty("keyAlias")
+                keyPassword = keystoreProps.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix = ".debug"
@@ -46,6 +68,7 @@ android {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfigs.findByName("release")?.let { signingConfig = it }
         }
     }
 

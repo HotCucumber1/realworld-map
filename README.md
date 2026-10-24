@@ -84,8 +84,26 @@ supabase/ schema.sql (таблицы, триггеры, RLS) и verify_schema.py
 
 ```bash
 ./gradlew assembleDebug        # debug APK, подпись debug-ключом, установка без аккаунта разработчика
-./gradlew assembleRelease      # release (R8). Для установки нужна ваша подпись (signingConfig)
+./gradlew assembleRelease      # release (R8), подписывается ключом из keystore.properties
 ```
+
+### Подпись release-сборки
+
+1. Создайте ключ (один раз) и **сохраните его копию в надёжном месте**: обновления приложения ставятся поверх только с тем же ключом.
+   ```bash
+   keytool -genkeypair -v -keystore ~/.android-keystores/worldexplorer-release.jks -storetype PKCS12 \
+     -alias worldexplorer -keyalg RSA -keysize 4096 -validity 10000
+   ```
+2. В корне проекта создайте `keystore.properties` (он в `.gitignore`):
+   ```properties
+   storeFile=/home/<user>/.android-keystores/worldexplorer-release.jks
+   storePassword=…
+   keyAlias=worldexplorer
+   keyPassword=…
+   ```
+3. `./gradlew assembleRelease` → `app/build/outputs/apk/release/app-release.apk` → `adb install -r app/build/outputs/apk/release/app-release.apk`.
+
+Без `keystore.properties` получится неподписанный `app-release-unsigned.apk`, который на телефон не установится.
 
 ## 6. Unit-тесты
 
